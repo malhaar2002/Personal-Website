@@ -1,0 +1,378 @@
+body {
+  background: url("../images/background-gradient.jpg");
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.mainText {
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+.about_body {
+  margin: 0;
+  padding: 0;
+  background: url("../images/background-gradient.jpg");
+}
+
+.contact_body {
+  margin: 0;
+  padding: 0;
+  background: url("../images/background-gradient.jpg");
+  color: black;
+}
+
+#homepage-subtext {
+  margin-top: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.whoAmI {
+  border: 5px groove black;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 10px;
+  background: #C6FFDD;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: 'Courier Prime', monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutme_heading {
+  height: 50px;
+  padding-left: 2vw;
+  padding-bottom: 10vh;
+  font-size: 3em;
+  padding-top: 2vh;
+  font-family: 'Arvo', serif;
+}
+
+.about_container {
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.transition_quote {
+  margin: 0;
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Shadows Into Light Two', cursive;
+}
+
+@media screen and (min-width: 601px) {
+  .intro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10vh;
+  }
+
+  .intro img {
+    height: 15vw;
+    margin-right: 5vw;
+  }
+
+  .intro_text {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .intro_text h1 {
+    font-family: 'Arvo', serif;
+    font-size: 3.2vw;
+  }
+
+  .intro_text p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5vw;
+  }
+
+  .transition_quote {
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .intro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5vh;
+  }
+
+  .intro img {
+    height: 30vw;
+    margin-right: 5vw;
+  }
+
+  .intro_text {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .intro_text h1 {
+    font-family: 'Arvo', serif;
+    font-size: 8vw;
+  }
+
+  .intro_text p {
+    font-family: 'Playfair Display', serif;
+    font-size: 4vw;
+  }
+
+  .transition_quote {
+    font-size: 6vw;
+  }
+}
+
+.skillsList {
+  margin-bottom: 5vh;
+  list-style: none;
+}
+
+.skills {
+  transition: 1s;
+  font-family: 'Calistoga', cursive;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 30px;
+  border: 5px groove black;
+}
+
+.skills:hover {
+  transform: scale(1.1);
+  background: #12c2e9;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.text_1 {
+  animation: text1;
+}
+
+.text_2 {
+  animation: text2;
+}
+
+.text_3 {
+  animation: text3;
+}
+
+.text_4 {
+  animation: text4;
+}
+
+.text_5 {
+  animation: text5;
+}
+
+.text_1, .text_2, .text_3, .text_4, .text_5 {
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  animation-duration: 10s;
+  animation-timing-function: steps(25, end);
+  animation-iteration-count: infinite;
+}
+
+.text_1::after, .text_2::after, .text_3::after, .text_4::after, .text_5::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  animation: caret infinite;
+  animation-duration: 1s;
+  animation-timing-function: steps(1, end);
+}
+
+@media screen and (min-width: 601px) {
+  @keyframes text1 {
+    0%, 20%, 40%, 60%, 80%, 100% {
+      width: 0;
+    }
+
+    5%, 15% {
+      width: 10em;
+    }
+  }
+
+  @keyframes text2 {
+    0%, 20%, 40%, 60%, 80%, 100% {
+      width: 0;
+    }
+
+    25%, 35% {
+      width: 12em;
+    }
+  }
+
+  @keyframes text3 {
+    0%, 20%, 40%, 60%, 80%, 100% {
+      width: 0;
+    }
+
+    45%, 55% {
+      width: 9.8em;
+    }
+  }
+
+  @keyframes text4 {
+    0%, 20%, 40%, 60%, 80%, 100% {
+      width: 0;
+    }
+
+    65%, 75% {
+      width: 20.5em;
+    }
+  }
+
+  @keyframes text5 {
+    0%, 20%, 40%, 60%, 80%, 100% {
+      width: 0;
+    }
+
+    85%, 95% {
+      width: 7.9em;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  @keyframes text1 {
+    0%, 25%, 50%, 75%, 100% {
+      width: 0;
+    }
+
+    5%, 20% {
+      width: 10em;
+    }
+  }
+
+  @keyframes text2 {
+    0%, 25%, 50%, 75%, 100% {
+      width: 0;
+    }
+
+    30%, 45% {
+      width: 12em;
+    }
+  }
+
+  @keyframes text3 {
+    0%, 25%, 50%, 75%, 100% {
+      width: 0;
+    }
+
+    55%, 70% {
+      width: 9.8em;
+    }
+  }
+
+  @keyframes text4 {
+    0%, 25%, 50%, 75%, 100% {
+      width: 0;
+    }
+  }
+
+  @keyframes text5 {
+    0%, 25%, 50%, 75%, 100% {
+      width: 0;
+    }
+
+    80%, 95% {
+      width: 7.9em;
+    }
+  }
+}
+
+@keyframes caret {
+  0%, 100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .contact_image {
+    width: 25vw;
+    display: block;
+    margin: auto;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+
+  .contact_icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4vh;
+    margin-bottom: 10vh;
+  }
+
+  .contact_body .contact_icons .icons {
+    width: 8vw;
+    height: 8vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact_image {
+    width: 100vw;
+    display: block;
+    margin: auto;
+    padding-top: 11vh;
+    padding-bottom: 2vh;
+  }
+
+  .contact_icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4vh;
+    margin-bottom: 10vh;
+  }
+
+  .contact_body .contact_icons .icons {
+    width: 20vw;
+    height: 20vh;
+  }
+
+  .icons {
+    padding-left: 7vw;
+  }
+}
