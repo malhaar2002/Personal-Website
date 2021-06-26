@@ -1,5 +1,5 @@
 body {
-  background: url("../images/background-gradient.jpg");
+  background: url("images/background-gradient.jpg");
 }
 
 @keyframes slideInFromLeft {
@@ -19,13 +19,13 @@ body {
 .about_body {
   margin: 0;
   padding: 0;
-  background: url("../images/background-gradient.jpg");
+  background: url("images/background-gradient.jpg");
 }
 
 .contact_body {
   margin: 0;
   padding: 0;
-  background: url("../images/background-gradient.jpg");
+  background: url("images/background-gradient.jpg");
   color: black;
 }
 
